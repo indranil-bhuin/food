@@ -60,6 +60,10 @@ const handlePayment = () => {
   RazorpayCheckout.open(options)
     .then((paymentData) => {
       // handle success
+      if (paymentData.status_code === 200)
+      {
+        
+      }
       console.log(paymentData);
     })
     .catch((error) => {
