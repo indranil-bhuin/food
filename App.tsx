@@ -4,17 +4,25 @@ import VendorListScreen from './src/screens/Employee/VendorListScreen';
 import SplashScreen from './src/screens/SplashScreen';
 import BottomTabNavigator from './src/navigation/BottomTabNavigator';
 import VendorDetailPage from './src/screens/Employee/VendorDetailPage';
-// import {NavigationContainer} from '@react-navigation/native';
-// import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // import SplashScreen from './src/screens/SplashScreen'
 import LoginScreen from './src/screens/LoginScreen'
+// import ItemDetailsSection from './src/components/CVendorDetailPage/ItemDetailsSection'
+import CartScreen from './src/screens/Employee/CartScreen';
 // import
 
-//const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <LoginScreen />
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name="VendorDetailPage" component={VendorDetailPage} />
+      <Stack.Screen name="CartScreen" component={CartScreen} />
+    </Stack.Navigator>
+    </NavigationContainer>
+
   );
 }
 
