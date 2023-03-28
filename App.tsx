@@ -10,7 +10,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from './src/screens/LoginScreen'
 // import ItemDetailsSection from './src/components/CVendorDetailPage/ItemDetailsSection'
 import CartScreen from './src/screens/Employee/CartScreen';
-import OrderStatusScreen from './src/screens/Employee/OrderStatusScreen';
 // import
 
 const Stack = createNativeStackNavigator();
@@ -21,10 +20,8 @@ const App = () => {
     <Stack.Navigator>
       <Stack.Screen name="VendorDetailPage" component={VendorDetailPage} />
       <Stack.Screen name="CartScreen" component={CartScreen} />
-      <Stack.Screen name="OrderStatusScreen" component={OrderStatusScreen} />
     </Stack.Navigator>
     </NavigationContainer>
-    // <OrderStatusScreen />
 
   );
 }
