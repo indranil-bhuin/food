@@ -10,19 +10,19 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from './src/screens/LoginScreen'
 // import ItemDetailsSection from './src/components/CVendorDetailPage/ItemDetailsSection'
 import CartScreen from './src/screens/Employee/CartScreen';
-// import
+import VHomeScreen from './src/screens/Vendor/VHomeScreen';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen name="VendorDetailPage" component={VendorDetailPage} />
-      <Stack.Screen name="CartScreen" component={CartScreen} />
-    </Stack.Navigator>
-    </NavigationContainer>
-
+    // <NavigationContainer>
+    // <Stack.Navigator>
+    //   <Stack.Screen name="VendorDetailPage" component={VendorDetailPage} />
+    //   <Stack.Screen name="CartScreen" component={CartScreen} />
+    // </Stack.Navigator>
+    // </NavigationContainer>
+<VHomeScreen/>
   );
 }
 
