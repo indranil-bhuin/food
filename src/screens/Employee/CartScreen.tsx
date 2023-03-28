@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Image } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/AntDesign';
 //import vendorData from './VendorDetailPage';
 import RazorpayCheckout from 'react-native-razorpay';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 const CartScreen = ({ route }) => {
+
+    const navigation = useNavigation();
+
   const { cart } = route.params;
    const { vendorData } = route.params;
 
@@ -60,15 +65,11 @@ const handlePayment = () => {
   RazorpayCheckout.open(options)
     .then((paymentData) => {
       // handle success
-    //   if (paymentData.status_code === 200)
-    //   {
-        
-    //   }
-      console.log(paymentData);
+      navigation.navigate('OrderStatusScreen');
     })
     .catch((error) => {
       // handle failure
-      console.log(error);
+      Alert('Try Again')
     });
 };
 
